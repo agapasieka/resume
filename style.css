@@ -14,11 +14,13 @@ h1 {
 h2 {
     font-size: 1.5em;
     padding-bottom: 1em;
+    background-color: green
 }
 main { 
     display: grid;
     grid-template-columns: 40% 60%;
     margin-top: 3em;
+    
 }
 header {
     text-align: center;
@@ -51,7 +53,4 @@ h1, h2 {
     border-right: 1px solid lightgray;
  }
 
- div {
-    background-color: green;
-    opacity: 0.3;
-  }
+
