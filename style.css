@@ -3,6 +3,7 @@ body {
     font-size: 16px;
     max-width: 960px;
     margin: auto;
+    background: rgb(177, 235, 177);
 }
 h1 {
     font-size: 3em;
@@ -47,7 +48,7 @@ hr {
 h1, h2 {
     font-weight: 100;
     margin-bottom: 0;
-    background: rgba(0, 128, 0, 0.6);
+    
 
 }
 #mainLeft {
