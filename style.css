@@ -51,4 +51,7 @@ h1, h2 {
     border-right: 1px solid lightgray;
  }
 
-
+ div {
+    background-color: green;
+    opacity: 0.3;
+  }
