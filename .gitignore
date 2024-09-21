@@ -1,0 +1,54 @@
+# Binaries for programs and plugins
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+
+# Output of the go command
+bin/
+build/
+*.out
+
+# Dependency directories (remove if using Go modules)
+vendor/
+
+# Go workspace file
+go.work
+go.work.sum
+
+# Logs
+*.log
+
+# IDE and editor specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+*.coverprofile
+*.cover.out
+*.cov
+
+# Test result
+*.test
+
+# Archives
+*.tar
+*.gz
+*.zip
+
+# Dependency files (remove if not using Go modules)
+go.sum
+
+# Temporary build files
+*.o
+*.a
+
+# Node-related (if your Go project includes front-end code)
+node_modules/
