@@ -42,7 +42,6 @@ jobs:
     - name: Run Python script
       run: |
         cd html-pdf-converter/
-        sleep 60
         python3 html-pdf-converter-email.py
     # Passes secrets as environment variables to Python script  
       env:
