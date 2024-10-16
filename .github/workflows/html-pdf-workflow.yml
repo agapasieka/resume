@@ -10,7 +10,7 @@ name: html to pdf workflow
 
 on:
   workflow_run:
-    workflows: ["pages build and deployment"] # Name of the first workflow
+    workflows: ["pages-build-deployment"] # Name of the first workflow
     types:
       - completed  # Trigger when Workflow A is completed
       
