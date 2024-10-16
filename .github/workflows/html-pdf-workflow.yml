@@ -2,13 +2,18 @@
 
 name: html to pdf workflow
 
-# Controls when the action will run. Workflow runs when manually triggered using the UI
-# or API.
-on:
-  push:
-    branches:
-      - main
+# Controls when the action will run.
+# on:
+#   push:
+#     branches:
+#       - main
 
+on:
+  workflow_run:
+    workflows: ["pages build and deployment"] # Name of the first workflow
+    types:
+      - completed  # Trigger when Workflow A is completed
+      
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   deploy:
