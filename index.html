@@ -1,104 +1,125 @@
-<html>
+<!doctype html>
+<html lang="en">
 	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="style.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 		<title>Agnieszka Pasieka's Resume</title>
 	</head>
 	<body>
 		<header id="header">
-			<hr><b>AGNIESZKA PASIEKA</b></hr>
+			<h1>AGNIESZKA PASIEKA</h1>
 			<hr>
-			GCP | Terraform | Docker | K8S | CI/CD | Python | Git | Linux/Windows | Automation | Monitoring
+			<p class="tagline">GCP | Azure | Terraform | Terragrunt | IaC | Crossplane | Kubernetes | CI/CD | ArgoCD | Checkov/Kyverno | Automation | Monitoring</p>
 			<hr>
 		</header>
 		<main>
-			<article id="mainLeft">
-				<section>
-					<h2>CONTACT</h2>
-					<p><i class="fa fa-envelope"></i><a href="mailto:agi.pasieka@outlook.com">Email me</a></p>
-					<p><i class="fab fa-github"></i><a href="https://github.com/agapasieka">GitHub</a></p>
-					<p><i class="fab fa-linkedin"></i><a href="https://linkedin.com/in/agnieszka-pasieka-47572337">Linkedin</a></p>
-					<p><i class="fab fa-medium-m"></i><a href="https://agnieszkapasieka.medium.com">Medium</a></p>
-					<p><i class="fas fa-graduation-cap"></i><a href="https://www.credly.com/users/agnieszka-pasieka">Credly</a></p>
-				</section>
-				<section>
-					<h2>SOFT SKILLS</h2>
-					<p>Problem-solver | Positive attitude | Continuous learner | Adaptable | Team player | Attention to detail | Resilient under pressure | Self-motivator</p>
-				</section>
-				<section>
-					<h2>EDUCATION</h2>
-					<b>Code First Girls</b> (2024) - Olympics Data Analysis with Python project <br>
-					<b>Google Cloud SkillsBoost</b> (2022-Present) - ACE, PCSE, PCNE, PCDE, PCA, PCDevOpsE  <br>
-					<b>HashiCorp Terraform</b> (2022) - Terraform Associate (002) <br>
-					<b>Microsoft Learn</b> (2020-2022) - AZ-900, AZ-104, SC-300, SC-900, AZ-500 <br>
-					<b>Skills Team Ltd</b> (2016-2017) - Level 2 in English, Maths, Infrastructure <br>
-					<b>State School of Higher Education, Poland</b> (2002-2005) - Bachelor's in Math and Informatics
-				</section>
-			</article>
-			<article id="mainRight">
-				<section>
-					<h2>WORK EXPERIENCE</h2>
-					<h3>GCP Cloud Engineer II</h3>
-					<p>Rackspace Technology | Jul 2022 - Sept 2024</p>
-					<ul>
-						<li>Key Projects:</li>
+			<section id="contact">
+				<h2>CONTACT</h2>
+				<p><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:agi.pasieka@outlook.com">agi.pasieka@outlook.com</a></p>
+				<!-- <p><i class="fas fa-phone" aria-hidden="true"></i>+44 XXXX XXXXXX</p> -->
+				<p><i class="fab fa-github" aria-hidden="true"></i><a href="https://github.com/agapasieka" target="_blank" rel="noopener">github.com/agapasieka</a></p>
+				<p><i class="fab fa-linkedin" aria-hidden="true"></i><a href="https://linkedin.com/in/agnieszka-pasieka-47572337" target="_blank" rel="noopener">linkedin.com/in/agnieszka-pasieka</a></p>
+				<p><i class="fab fa-medium-m" aria-hidden="true"></i><a href="https://agnieszkapasieka.medium.com" target="_blank" rel="noopener">agnieszkapasieka.medium.com</a></p>
+			</section>
+			<section id="skills">
+				<h2>SOFT SKILLS</h2>
+				<p>Problem-solver | Positive attitude | Continuous learner | Adaptable | Team player | Attention to detail | Resilient under pressure | Self-motivator</p>
+			</section>
+			<section id="experience">
+				<h2>WORK EXPERIENCE</h2>
+				<h3>Cloud Platform Engineer</h3>
+				<p>Prolific | Nov 2024 - Present</p>
+				<ul>
+					<li>Key Projects:
+						<ul>
+							<li>Built an AI-powered merge gate that calls Claude on every Terraform plan PR to assess downtime, blast-radius, and security risk, blocking merge on medium/high risk until Cloud Platform team approval.</li>
+							<li>Deployed a full custom Checkov policy suite in Python enforcing GCP resource labelling, deletion protection, high availability, and a destructive-plan gate blocking delete/replace actions on stateful resources; integrated into GitHub Actions CI.</li>
+							<li>Hardened security and reliability of the payments service, including namespace isolation, scoped secrets access, and restricted JIT access controls.</li>
+							<li>Migrated community ingress-nginx to F5 NGINX Ingress Controller across all environments.</li>
+							<li>Deployed and managed Kyverno policies to guard against unauthorized Crossplane resource creation, restricting teams to the sanctioned self-service abstraction.</li>
+						</ul>
+					</li>
+					<li>Maintain Terraform/Terragrunt codebases for GCP resources (GKE, KMS) and use Crossplane to declaratively provision Cloud SQL, Pub/Sub, GCS buckets, and service accounts via Kubernetes CRDs.</li>
+					<li>Manage GitOps deployments with ArgoCD, routing microservices to clusters via Helm values files and ApplicationSets.</li>
+					<li>Audited GCP org policies and deployed missing ones from scratch via Terraform, and closed gaps in Cloud SQL backup/point-in-time-recovery coverage across the production estate.</li>
+					<li>Built a Datadog vendor-status dashboard backed by scheduled synthetic checks, plus a Claude Code on-call triage skill, to speed up "is it us or the vendor?" incident triage.</li>
+					<li>Participate in weekly reactive ticket queue rotation, deploying new infrastructure on demand and fixing issues across GCP infra.</li>
+					<li>Built custom Claude Code skills to support work planning/organization and end-of-day summarizing.</li>
+				</ul>
+
+				<h3>GCP Cloud Engineer II</h3>
+				<p>Rackspace Technology | Jul 2022 - Sept 2024</p>
+				<ul>
+					<li>Key Projects:
 						<ul>
 							<li>OS patching automation with Bash/PowerShell scripts, improving system maintenance efficiency.</li>
 							<li>Infrastructure reviews and managed resource imports via Terraform, ensuring system optimization.</li>
 							<li>Network isolation between production and development resources for enhanced security.</li>
 							<li>Secured web apps behind load balancers with Identity-Aware Proxy and enabled secure SSH access to GCE instances.</li>
-						    <li>Developed technical content and hands-on labs to enhance the team's skillset and support continuous learning.</li>
+							<li>Developed technical content and hands-on labs to enhance the team's skillset and support continuous learning.</li>
 						</ul>
-						<li>Managed GCP deployments using Terraform and Google SDK.</li>
-						<li>Implemented DevOps principles through pipeline: Terraform, GitHub, CircleCI.</li>
-						<li>GKE deployment and configuration.</li>
-						<li>Created alert policies for monitoring resources, responded to alerts.</li>
-						<li>Troubleshooted Windows/Linux issues.</li>
-						<li>Created and updated internal documentation and exercise labs.</li>
-						<li>Mentor new hires, hosted shadowing sessions.</li>
-						<li>Stayed current with emerging cloud technologies.</li>
-					</ul>
-					
-					<h3>Head of Information Technology</h3>
-					<p>Berkshire College of Agriculture | Sept 2021 - Jul 2022</p>
-					<ul>
-						<li>Led IT planning and integrations during mergers.</li>
-						<li>Managed IT team and tasks, ensuring smooth operations.</li>
-						<li>Planning future solutions and deployments.</li>
-					</ul>
+					</li>
+					<li>Managed GCP deployments using Terraform and Google SDK.</li>
+					<li>Implemented DevOps principles through pipeline: Terraform, GitHub, CircleCI.</li>
+					<li>GKE deployment and configuration.</li>
+					<li>Created alert policies for monitoring resources, responded to alerts.</li>
+					<li>Troubleshooted Windows/Linux issues.</li>
+					<li>Created and updated internal documentation and exercise labs.</li>
+					<li>Mentor new hires, hosted shadowing sessions.</li>
+					<li>Stayed current with emerging cloud technologies.</li>
+				</ul>
 
-					<h3>System Administrator</h3>
-					<p>Berkshire College of Agriculture | 2014 - 2021</p>
-					<ul>
-						<li>Azure Projects:</li>
-							<ul>
-								<li>AD Connect installation and setup</li>
-								<li>Self-Service Password Reset</li>
-								<li>MFA - Planning and deployment via conditional access policies</li>
-								<li>Creating vNets using Hub & Spoke Topology, Subnets, NSGs</li>
-								<li>Azure Web App administration: adding custom domain names, vNet integration, Enterprise registrations, setting up backups, monitoring and scaling resources, creating alerts</li>
-							    <li>Storage Accounts: controlling public access, access tiers, vNet integration</li>
-								<li>WAF setup and monitoring</li>
-								<li>Licensing management</li>
-								<li>RBAC roles and Azure Policies</li>
-							</ul>
-						<li>Synchronizing users from on premises AD to Google Workspace and Azure</li>
-						<li>Oversaw network infrastructure, including HP/Aruba switches.</li>
-						<li>Administered VMware and ESXI hosts, snapshots, backups.</li>
-						<li>Handled server patching, vulnerability scans (Nessus), WSUS.</li>
-						<li>Administered AD, DNS, DHCP, GPO, Google Workspace, Azure, and Malwarebytes.</li>
-						<li>Monitored infrastructure with Nessus, Windows Admin Center, Powershell scripting.</li>
-					</ul>
+				<h3>Head of Information Technology</h3>
+				<p>Berkshire College of Agriculture | Sept 2021 - Jul 2022</p>
+				<ul>
+					<li>Led IT planning and integrations during mergers.</li>
+					<li>Managed IT team and tasks, ensuring smooth operations.</li>
+					<li>Planning future solutions and deployments.</li>
+				</ul>
 
-					<h3>IT Support Engineer</h3>
-					<p>Berkshire College of Agriculture | 2012 - 2014</p>
-					<ul>
-						<li>Configured and maintained desktops, laptops, printers.</li>
-						<li>Managed software deployment via Symantec Ghost and GPO.</li>
-						<li>Supported users remotely with Dameware, managed Active Directory.</li>
-					</ul>
-				</section>
-			</article>
+				<h3>System Administrator</h3>
+				<p>Berkshire College of Agriculture | 2014 - 2021</p>
+				<ul>
+					<li>Azure Projects:
+						<ul>
+							<li>AD Connect installation and setup</li>
+							<li>Self-Service Password Reset</li>
+							<li>MFA - Planning and deployment via conditional access policies</li>
+							<li>Creating vNets using Hub &amp; Spoke Topology, Subnets, NSGs</li>
+							<li>Azure Web App administration: adding custom domain names, vNet integration, Enterprise registrations, setting up backups, monitoring and scaling resources, creating alerts</li>
+							<li>Storage Accounts: controlling public access, access tiers, vNet integration</li>
+							<li>WAF setup and monitoring</li>
+							<li>Licensing management</li>
+							<li>RBAC roles and Azure Policies</li>
+						</ul>
+					</li>
+					<li>Synchronizing users from on premises AD to Google Workspace and Azure</li>
+					<li>Oversaw network infrastructure, including HP/Aruba switches.</li>
+					<li>Administered VMware and ESXI hosts, snapshots, backups.</li>
+					<li>Handled server patching, vulnerability scans (Nessus), WSUS.</li>
+					<li>Administered AD, DNS, DHCP, GPO, Google Workspace, Azure, and Malwarebytes.</li>
+					<li>Monitored infrastructure with Nessus, Windows Admin Center, Powershell scripting.</li>
+				</ul>
+
+				<h3>IT Support Engineer</h3>
+				<p>Berkshire College of Agriculture | 2012 - 2014</p>
+				<ul>
+					<li>Configured and maintained desktops, laptops, printers.</li>
+					<li>Managed software deployment via Symantec Ghost and GPO.</li>
+					<li>Supported users remotely with Dameware, managed Active Directory.</li>
+				</ul>
+			</section>
+			<section id="education">
+				<h2>EDUCATION</h2>
+				<b>Code First Girls</b> (2024) - Olympics Data Analysis with Python project <br>
+				<b>Google Cloud SkillsBoost</b> (2022-Present) - ACE, PCSE, PCNE, PCDE, PCA, PCDevOpsE  <br>
+				<b>HashiCorp Terraform</b> (2022) - Terraform Associate (002) <br>
+				<b>Microsoft Learn</b> (2020-2022) - AZ-900, AZ-104, SC-300, SC-900, AZ-500 <br>
+				<b>Skills Team Ltd</b> (2016-2017) - Level 2 in English, Maths, Infrastructure <br>
+				<b>State School of Higher Education, Poland</b> (2002-2005) - Bachelor's in Math and Informatics
+			</section>
 		</main>
 	</body>
 </html>
