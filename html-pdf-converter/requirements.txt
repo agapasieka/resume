@@ -1,2 +1,2 @@
-pyhtml2pdf==0.0.7
+pyhtml2pdf==0.1.0
 yagmail==0.15.293
