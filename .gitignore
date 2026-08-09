@@ -52,3 +52,5 @@ go.sum
 
 # Node-related (if your Go project includes front-end code)
 node_modules/
+
+todo.md
