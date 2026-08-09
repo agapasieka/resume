@@ -37,7 +37,7 @@
 							<li>Authored a full custom Checkov policy suite in Python enforcing GCP resource labelling, deletion protection, high availability, and a destructive-plan gate blocking delete/replace actions on stateful resources; integrated into GitHub Actions CI.</li>
 							<li>Hardened the payments service: isolated it into a dedicated Kubernetes namespace, scoped secrets via a dedicated External Secrets SecretStore, tuned PodDisruptionBudgets/replicas/readiness probes to eliminate 502 errors during pod restarts, and restricted JIT secret access to a specific team.</li>
 							<li>Migrated community ingress-nginx to F5 NGINX Ingress Controller across all environments.</li>
-							<li>Defined Kyverno admission policies governing Crossplane resource creation and established the architectural split between plan-JSON policy checks and Terragrunt-level validation.</li>
+							<li>Deployed and managed Kyverno policies to guard against unauthorized Crossplane resource creation, restricting teams to the sanctioned self-service abstraction.</li>
 						</ul>
 					</li>
 					<li>Maintain Terraform/Terragrunt codebases for GCP resources (GKE, KMS) and use Crossplane to declaratively provision Cloud SQL, Pub/Sub, GCS buckets, and service accounts via Kubernetes CRDs.</li>
