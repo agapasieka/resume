@@ -42,6 +42,12 @@ jobs:
         cd html-pdf-converter/
         pip install -r requirements.txt
 
+    # Downloads the headless Chromium build Playwright uses to render the PDF
+    - name: Install Playwright browser
+      run: |
+        cd html-pdf-converter/
+        python3 -m playwright install --with-deps chromium
+
     # Executes a Python script
     - name: Run Python script
       run: |

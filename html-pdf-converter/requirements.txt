@@ -1,2 +1,2 @@
-pyhtml2pdf==0.1.0
+playwright==1.49.1
 yagmail==0.16.0
