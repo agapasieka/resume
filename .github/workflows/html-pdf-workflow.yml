@@ -1,5 +1,5 @@
-# Renders the resume to PDF and emails it whenever changes land on main
-# (i.e. when a PR is merged). Also runnable on demand from the Actions tab.
+# Renders the resume to PDF and emails it. Triggered manually from the
+# Actions tab ("Run workflow") — run it when you actually want a fresh PDF.
 #
 # The script renders the local index.html, so this does not depend on
 # GitHub Pages having rebuilt first.
@@ -7,8 +7,6 @@
 name: html to pdf workflow
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 jobs:
