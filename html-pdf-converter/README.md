@@ -1,8 +1,9 @@
 # Render the resume to PDF and email it
 
 A small GitHub Actions job that renders the resume to a PDF and emails it as an
-attachment. It is triggered manually — from the **Actions** tab ("Run
-workflow"), or by commenting `/send-cv` on a PR (owner only).
+attachment. It runs automatically when changes land on `main` (i.e. when a PR
+is merged), and can also be run on demand from the **Actions** tab ("Run
+workflow").
 
 ## How it works
 
