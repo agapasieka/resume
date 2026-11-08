@@ -1,26 +1,16 @@
-# Renders the live resume page to PDF and emails it. Manually triggered —
-# either via the Actions tab ("Run workflow") or by commenting "/send-cv" on
-# a PR once you know the changes on it are final and Pages has rebuilt.
+# Renders the resume to PDF and emails it. Triggered manually from the
+# Actions tab ("Run workflow") — run it when you actually want a fresh PDF.
 #
-# Gated to the repo owner's comments only: this repo is public, so an
-# ungated issue_comment trigger would let anyone comment on any PR/issue
-# and fire it.
+# The script renders the local index.html, so this does not depend on
+# GitHub Pages having rebuilt first.
 
 name: html to pdf workflow
 
 on:
   workflow_dispatch:
-  issue_comment:
-    types: [created]
 
 jobs:
   deploy:
-    if: >
-      github.event_name == 'workflow_dispatch' ||
-      (github.event.issue.pull_request != null &&
-       github.event.comment.user.login == 'agapasieka' &&
-       contains(github.event.comment.body, '/send-cv'))
-
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -41,6 +31,12 @@ jobs:
       run: |
         cd html-pdf-converter/
         pip install -r requirements.txt
+
+    # Downloads the headless Chromium build Playwright uses to render the PDF
+    - name: Install Playwright browser
+      run: |
+        cd html-pdf-converter/
+        python3 -m playwright install --with-deps chromium
 
     # Executes a Python script
     - name: Run Python script
