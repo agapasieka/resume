@@ -1,2 +1,2 @@
-playwright==1.49.1
+playwright==1.65.2
 yagmail==0.16.0
